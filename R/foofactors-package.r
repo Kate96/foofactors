@@ -5,6 +5,8 @@
 #' stringsAsFactors. And yet, sometimes you need them. Can they be made less
 #' maddening? Let's find out.
 #'
+#' To install the package run \code{install.packages("foofactors")}
+#'
 #' @name foofactors
 #' @docType package
 NULL

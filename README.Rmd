@@ -62,3 +62,20 @@ The `freq_out()` function returns a frequency table as a well-named `tbl_df`:
 ```{r}
 freq_out(x)
 ```
+
+We may also want to make a factor and reorder its levels in a descending order (possibly starting from, for example, a vector of strings as an input). Using `reorder()` along with `dplyr::desc()` function can be inconvenient for readability. Which is why `fct_desc()` is very helpful for this purpose. It will return a factor, the levels of which are ordered in a descending order (alphabetically or numerically). If a factor is inputed, it will first get converted into a character vector.
+
+```{r}
+v1 <- c(1, 1000, 10, 10000)
+fct_desc(v1) #ordered numerically in a descending order
+```
+
+```{r}
+f1 <- factor(c(1, 1000, 10, 10000))
+fct_desc(f1) #ordered numerically in a descending order
+```
+
+```{r}
+v2 <- c("a", "c", "d")
+fct_desc(v2) #ordered alphabetically in a descending order
+```
